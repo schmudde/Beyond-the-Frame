@@ -1,0 +1,106 @@
+// Single primary color that all mixins use. Str8 ballin.
+@primary:        hsl(0, 100%, 34%);
+
+// Primary Variants -
+@primaryLight:   hsl(hue(@primary), 100%, 70%);
+@primaryDark:    hsl(hue(@primary), 60%, 40%);
+@primaryFaded:   hsl(hue(@primary), 60%, 65%);
+
+// 180degree Variants
+@variant:         spin((@primary), 180);
+@variantLight:    hsl(hue(@variant), 100%, 70%);
+@variantDark:     hsl(hue(@variant), 60%, 40%);
+@variantFaded:    hsl(hue(@variant), 60%, 65%);
+
+// 90degree Variants
+@corner:         spin((@primary), 70);
+@cornerLight:    hsl(hue(@corner), 100%, 70%);
+@cornerDark:     hsl(hue(@corner), 60%, 40%);
+@cornerFaded:    hsl(hue(@corner), 60%, 65%);
+
+body {
+	/* #gradient > .directional(@primary; #FFF; 90deg); */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: transparent;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+[class*="col-"], .contentHolder, .testSpacer-1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.logo {
+    //.make-md-column(3);
+    .make-sm-column(3);
+    .make-xs-column(6);
+}
+
+section {
+}
+
+/*  ****** */
+
+textarea {
+    .box-sizing(border-box);
+    width: 100%;
+}
+
+#navigation {
+  .make-row();
+}
+
+nav {
+    .make-xs-column(0);
+    .make-sm-column(1);
+}
+
+	nav.navMenu  {
+	    .make-xs-column(12);
+    	.make-sm-column(6);
+    	.make-sm-column-offset(2);
+	    @media (max-width: @screen-sm-min) {
+    		text-align: left;
+    	}
+	}
+
+	nav.socialMenu {
+    	.make-xs-column(12);
+	    .make-sm-column(3);
+		text-align: right;
+	    @media (max-width: @screen-sm-min) {
+    	    text-align: left;
+        	border: none;
+	    }
+	}
+
+
+/* unvisited link */
+a:link {
+    color: @primary;
+}
+
+/* visited link */
+a:visited {
+    color: @primaryFaded;
+}
+
+/* mouse over link */
+a:hover {
+    color: @cornerFaded;
+    text-decoration:none;
+}
+
+/* selected link */
+a:active {
+    color: @primaryDark;
+}
