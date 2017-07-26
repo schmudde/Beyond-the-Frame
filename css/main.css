@@ -1,16 +1,9 @@
-
-
-
 /**
  * Tags
  */
 
 html {
-	background: url(../img/borderlessBG.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url(../img/fiber.jpg);
 }
 
 body {
@@ -39,21 +32,20 @@ a {
  * Classes / IDs
  */
 
-.pageContent {
-    border-left: 6px solid red;
-    background: rgba(255,255,255,0.9);
-    color: gray;
-}
-
-    .pageContent header {
+header {
         font-size: 30px;
         color: red;
         padding-top: 25px;
-    }
+}
 
-    .pageContent p {
+#strategies-for-interactive-and-immersive-dance, #clojurebridge-nyc-advanced-track-day-1 {
+    font-size: 40px;
+}
 
-    }
+.pageContent {
+    background: rgba(255,255,255,0.4);
+    color: black;
+}
 
     .pageContent h2 {
         text-decoration: underline;
@@ -75,9 +67,9 @@ a {
  */
 
 video#bgvid {
-	position: fixed; right: 0; bottom: 0;
-	min-width: 100%; min-height: 100%;
-	width: auto; height: auto; z-index: -100;
-	background: url(polina.jpg) no-repeat;
-	background-size: cover;
+	/* position: fixed; right: 0; bottom: 0; */
+	/* min-width: 100%; min-height: 100%; */
+	/* width: auto; height: auto; z-index: -100; */
+	/* background: url(polina.jpg) no-repeat; */
+	/* background-size: cover; */
 }
